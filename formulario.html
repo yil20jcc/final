@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Interfaz</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500&display=swap" rel="stylesheet">    
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/interfaz.css" />
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div class="container-fluid p-0 d-flex h-100">
+            <div id="bdSidebar" class="d-flex flex-column flex-shrink-0 p-3 bg-success text-white offcanvas-md offcanvas-start" style="width: 280px;">
+                <a href="#" class="navbar-brand">
+                    <h5><i class="fa-solid fa-bomb me-2" style="font-size: 28px;"></i> Chess Info Personal</h5>
+                </a>
+                <hr>
+                <ul class="mynav nav nav-pills flex-column mb-auto">
+                    <li class="nav-item mb-1">
+
+                        <a href="index.html" id="item_menu_producto">
+                            <i class="fa-solid fa-wave-square"></i>
+                            Inicio
+                        </a>
+                    </li>
+                    <li class="nav-item mb-1">
+                        <a href="notificaciones.html" id="item_menu_producto">
+                            <i class="fa-solid fa-bell"></i>
+                            Notificaciones
+                            <span class="notification-badge"></span>
+                        </a>
+                    </li>
+                    <li class="nav-item mb-1">
+                        <a href="formulario.html" id="item_menu_producto">
+                            <i class="fa-solid fa-chart-simple"></i>
+                            Formulario
+                        </a>
+                    </li>
+                    <li class="nav-item mb-1">
+                        <a href="partidas.html" id="item_menu_producto">
+                            <i class="fa-solid fa-star"></i>
+                            Partidas Favoritas
+                        </a>
+                    </li>
+                    <li class="nav-item mb-1">
+                        <a href="libros.html" id="item_menu_producto">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                            Libros
+                        </a>
+                    </li>
+                    
+                    <li class="nav-item mb-1">
+                        <a href="cliente.html" id="item_menu_producto">
+                            <i class="fa-solid fa-user"></i>
+                            Cliente
+                        </a>
+                    </li>
+                
+                </ul>
+                <hr>
+                <div class="d-flex">
+                    <img src="chess.jpg" class="img-fluid rounded me-2" width="50px" alt="">
+                    <span>
+                        <h6 class="mt-1 mb-0">Yilber Camacaro</h6>
+                        <small>yilberJCC0423@gmail.com</small>
+                    </span>
+                </div>
+            </div>
+    
+            <div class="bg-light flex-fill">
+                <div class="p-2 d-md-none d-flex text-white bg-success">
+                    <a href="#" class="text-white" data-bs-toggle="offcanvas" data-bs-target="#bdSidebar">
+                        <i class="fa-solid fa-bars"></i>
+                    </a>
+                    <span class="ms-3">Menu Chess</span>
+                </div>
+                <div class="container my-3">
+                    <div class="row">
+                        <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4 py-4 bg-white">
+                            <h2>Formulario de Ajedrez</h2>
+                            <form>
+                                <div class="mb-3">
+                                    <label for="nombre" class="form-label">Apertura</label>
+                                    <input type="text" class="form-control" id="nombre" placeholder="Nombre de la Apertura" autofocus />
+                                </div>
+                                <div class="mb-3">
+                                    <label for="descripcion" class="form-label">Descripción</label>
+                                    <textarea class="form-control" id="descripcion" placeholder="Descripción de la Apertura" rows="3"></textarea>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="programadores" class="form-label">Número de Movimientos Realizados</label>
+                                    <input type="number" class="form-control" id="programadores" />
+                                </div>
+                                <div class="d-grid gap-2">
+                                    <button class="btn btn-success">Guardar</button>
+                                    <button class="btn btn-secondary">Limpiar</button>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="col-sm-12 col-md-8 col-lg-8 col-xl-8 py-4 bg-white">
+                            <h2>Listado de Aperturas</h2>
+                            <table class="table table-dark table-striped">
+                                <thead>
+                                    <tr>
+                                        <th class="centrado">#</th>
+                                        <th class="centrado">Apertura</th>
+                                        <th class="centrado">Cantidad de Jugadas</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="centrado">1</td>
+                                        <td class="centrado">Escocesa</td>
+                                        <td class="centrado">21</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="centrado">2</td>
+                                        <td class="centrado">Karo-Kan</td>
+                                        <td class="centrado">30</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="centrado">3</td>
+                                        <td class="centrado">Defensa Ciciliana</td>
+                                        <td class="centrado">17</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="centrado">4</td>
+                                        <td class="centrado">Gambito de Dama</td>
+                                        <td class="centrado">49</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                        
+                    </div>
+            
+                    
+                </div>
+              <script src="menu.js"></script>
+  </body>
+</html> 
